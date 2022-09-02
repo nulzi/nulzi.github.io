@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Nulzi's Room"
 title_separator          : "-"
 subtitle                 : "ver 0.0"
-name                     : "Your Name"
+name                     : "Nulzi"
 description              : "An amazing website."
 url                      : "https://nulzi.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Nulzi"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Somewhere"
