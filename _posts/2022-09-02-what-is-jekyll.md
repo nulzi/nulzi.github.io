@@ -3,7 +3,7 @@ layout: post
 title:  "What is Jekyll?"
 ---
 
-<img src="https://jekyllrb.com/img/logo-2x.png" width=30% height=30% alt="jekyll logo"/>
+![image](https://user-images.githubusercontent.com/74344132/188190700-d9a97735-3974-419c-b71b-584644f171e9.png)
 
 ## Jekyll이 뭔가요?
 
