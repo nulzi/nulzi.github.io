@@ -20,6 +20,7 @@ AJAX는 웹 페이지가 뒤에서(behind the scenes) 웹 서버를 가지고 �
 ### 예시 코드
 
 #옛날 JS 방식
+
 ```html
 <script>
   
@@ -37,6 +38,7 @@ AJAX는 웹 페이지가 뒤에서(behind the scenes) 웹 서버를 가지고 �
 
 #요즘 JS 방식
 1. then 함수 사용
+
 ```html
 <script>
   
@@ -58,6 +60,7 @@ AJAX는 웹 페이지가 뒤에서(behind the scenes) 웹 서버를 가지고 �
 ```
 
 2. await 문법 사용
+
 ```html
 <script>
   
@@ -77,6 +80,7 @@ AJAX는 웹 페이지가 뒤에서(behind the scenes) 웹 서버를 가지고 �
 ```
 
 #외부 라이브러리 방식($.ajax(), axios)
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
