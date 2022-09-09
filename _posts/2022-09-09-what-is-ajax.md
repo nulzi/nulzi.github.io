@@ -56,6 +56,7 @@ AJAX는 웹 페이지가 뒤에서(behind the scenes) 웹 서버를 가지고 �
   
 </script>
 ```
+
 2. await 문법 사용
 ```html
 <script>
