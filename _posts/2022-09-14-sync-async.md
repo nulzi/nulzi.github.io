@@ -15,6 +15,7 @@ title: Synchronous / Asynchronous Programming
 * 단점
   * 속도(Speed): 다중 요청을 다루는 것에서 비동기 프로그래밍보다 느립니다.
   * 자원 집약(Resource Intensity): 다중 비동기 실행은 하나의 스레드에서 가능하지만, 동기에서는 안되기 때문에 많은 자원을 요구합니다.
+### 활용
 
 ## Asynchronous(비동기)
 ### 먼저 현실에서 상상해보자
@@ -33,6 +34,7 @@ title: Synchronous / Asynchronous Programming
   * 복잡성(Complexity): 깊이 있는 지식이 필요하고 코드 자체가 복잡해질 수 있습니다.
   * 지연 시간(Latency): 처음 페이지 렌더링하는 데 시간이 걸릴 수 있습니다. 또한 비동기 요청이 많을 경우 서버에 과부하가 걸리고 느려질 수 있습니다.
   * 호환성(Compatibility): C++나 JavaScript에서는 많이 사용되지만 다른 언어에서는 사용하기 쉽지 않습니다.
+### 활용
 
 ##### 참고 사이트
 * <span style="font-size: 17px;"><a href='https://www.trio.dev/blog/synchronous-and-asynchronous'>https://www.trio.dev/blog/synchronous-and-asynchronous</a></span>
