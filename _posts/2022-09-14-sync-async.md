@@ -35,5 +35,5 @@ title: Synchronous / Asynchronous Programming
   * 호환성(Compatibility): C++나 JavaScript에서는 많이 사용되지만 다른 언어에서는 사용하기 쉽지 않습니다.
 
 ##### 참고 사이트
-* <span style="font-size: 17px;">https://www.trio.dev/blog/synchronous-and-asynchronous</span>
-* <span style="font-size: 17px;">https://nesoy.github.io/articles/2017-01/Synchronized</span>
+* <span style="font-size: 17px;"><a href='https://www.trio.dev/blog/synchronous-and-asynchronous'>https://www.trio.dev/blog/synchronous-and-asynchronous</a></span>
+* <span style="font-size: 17px;"><a href='https://nesoy.github.io/articles/2017-01/Synchronized'>https://nesoy.github.io/articles/2017-01/Synchronized</a></span>
