@@ -33,6 +33,7 @@ title: Synchronous / Asynchronous Programming
   * 복잡성(Complexity): 깊이 있는 지식이 필요하고 코드 자체가 복잡해질 수 있습니다.
   * 지연 시간(Latency): 처음 페이지 렌더링하는 데 시간이 걸릴 수 있습니다. 또한 비동기 요청이 많을 경우 서버에 과부하가 걸리고 느려질 수 있습니다.
   * 호환성(Compatibility): C++나 JavaScript에서는 많이 사용되지만 다른 언어에서는 사용하기 쉽지 않습니다.
+
 ##### 참고 사이트
-* <span style="font-size: 20px;">https://www.trio.dev/blog/synchronous-and-asynchronous</span>
-* https://nesoy.github.io/articles/2017-01/Synchronized
+* <span style="font-size: 17px;">https://www.trio.dev/blog/synchronous-and-asynchronous</span>
+* <span style="font-size: 17px;">https://nesoy.github.io/articles/2017-01/Synchronized</span>
