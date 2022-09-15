@@ -16,7 +16,9 @@ title: Synchronous / Asynchronous Programming
   * 속도(Speed): 다중 요청을 다루는 것에서 비동기 프로그래밍보다 느립니다.
   * 자원 집약(Resource Intensity): 다중 비동기 실행은 하나의 스레드에서 가능하지만, 동기에서는 안되기 때문에 많은 자원을 요구합니다.
 ### 활용
-
+* 비디오 렌더링
+* 수학적 계산
+* 결제 시스템
 ## Asynchronous(비동기)
 ### 먼저 현실에서 상상해보자
 레스토랑이 있고 비동기적으로 일을 하는 웨이터 **async**가 있다. 만약 세트 메뉴를 주문 받으면 **async**는 메인 메뉴가 나오기 전에 먼저 나오는 에피타이저부터 서빙합니다.
@@ -35,7 +37,12 @@ title: Synchronous / Asynchronous Programming
   * 지연 시간(Latency): 처음 페이지 렌더링하는 데 시간이 걸릴 수 있습니다. 또한 비동기 요청이 많을 경우 서버에 과부하가 걸리고 느려질 수 있습니다.
   * 호환성(Compatibility): C++나 JavaScript에서는 많이 사용되지만 다른 언어에서는 사용하기 쉽지 않습니다.
 ### 활용
+* I/O 작업
+* 데이터 베이스의 쿼리
+* 반복문이 많은 프로젝트
+* 반응형 UI
 
 ##### 참고 사이트
 * <span style="font-size: 17px;"><a href='https://www.trio.dev/blog/synchronous-and-asynchronous'>https://www.trio.dev/blog/synchronous-and-asynchronous</a></span>
 * <span style="font-size: 17px;"><a href='https://nesoy.github.io/articles/2017-01/Synchronized'>https://nesoy.github.io/articles/2017-01/Synchronized</a></span>
+* <span style="font-size: 17px;"><a href='https://www.mendix.com/blog/asynchronous-vs-synchronous-programming/#use-cases'>https://www.mendix.com/blog/asynchronous-vs-synchronous-programming/#use-cases</a></span>
