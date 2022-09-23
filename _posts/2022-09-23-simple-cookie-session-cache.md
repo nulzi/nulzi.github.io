@@ -61,3 +61,9 @@ title: Web. cookie and session
 쿠키는 지워져도 되고, 조작되거나 가로채여도 큰 문제가 없는 수준의 정보를 저장하는 데 사용됩니다.  
 노출되면 안 되는 중요한 정보들은 세션으로 서버에서 다뤄집니다.  
 따라서 웹을 설계할 때 정보를 쿠키에 저장할지 세션에 저장할지 적절한 판단이 필요합니다.
+
+###### 참고 사이트
+https://inpa.tistory.com/entry/WEB-%F0%9F%8C%90-%EC%BF%A0%ED%82%A4-%EC%84%B8%EC%85%98-%EC%A0%95%EB%A6%AC
+https://victorydntmd.tistory.com/34
+https://www.youtube.com/watch?v=1emZgLiGE4s
+https://www.youtube.com/watch?v=OpoVuwxGRDI
