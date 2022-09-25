@@ -28,6 +28,7 @@ title: Web. cookie and session
 쿠키는 브라우저에서 관리되는 작은 기록 정보 파일을 의미합니다.  
 
 #### 쿠키의 구성요소
+
 |이름|내용|
 |:---:|---|
 |이름(key)|각각의 쿠키를 구별하는 데 사용하는 이름|
@@ -74,7 +75,7 @@ title: Web. cookie and session
 따라서 웹을 설계할 때 정보를 쿠키에 저장할지 세션에 저장할지 적절한 판단이 필요합니다.
 
 ###### 참고 사이트
-https://inpa.tistory.com/entry/WEB-%F0%9F%8C%90-%EC%BF%A0%ED%82%A4-%EC%84%B8%EC%85%98-%EC%A0%95%EB%A6%AC  
-https://victorydntmd.tistory.com/34  
-https://www.youtube.com/watch?v=1emZgLiGE4s  
-https://www.youtube.com/watch?v=OpoVuwxGRDI  
+<https://inpa.tistory.com/entry/WEB-%F0%9F%8C%90-%EC%BF%A0%ED%82%A4-%EC%84%B8%EC%85%98-%EC%A0%95%EB%A6%AC>  
+<https://victorydntmd.tistory.com/34>  
+<https://www.youtube.com/watch?v=1emZgLiGE4s>  
+<https://www.youtube.com/watch?v=OpoVuwxGRDI>  
