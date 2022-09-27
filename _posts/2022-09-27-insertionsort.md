@@ -36,9 +36,11 @@ console.log(arr);
 ```
 
 ### 성능 비교(O notation)
+
 - Best case: $O(n)$
 - Worst case: $O(n^2)$
 
 ###### 참고 사이트
+
 <https://rddcat.github.io/insertion-sort/>  
 <https://velog.io/@jangws/9.-%EC%82%BD%EC%9E%85-%EC%A0%95%EB%A0%ACInsertion-sort>
