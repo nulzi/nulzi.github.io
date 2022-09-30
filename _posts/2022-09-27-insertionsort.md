@@ -6,9 +6,9 @@ categories: "algorithm"
 
 ## Insertion Sort
 
-삽입 정렬은 배열의 요소와 선택된 요소의 좌측 요소들과 비교하여 옳바른 자리에 삽입을 통해 오름차순 또는 내림차순으로 정렬하는 방법입니다.  
+삽입 정렬은 배열의 요소와 선택된 요소의 좌측 요소들과 비교하여 옳바른 자리에 삽입을 통해 오름차순 또는 내림차순으로 정렬하는 방법입니다.
 
-![](../assets/image/InsertionSort.png)  
+![](../assets/image/InsertionSort.png)
 
 ### Pseudo Code
 
@@ -20,16 +20,16 @@ categories: "algorithm"
 
 ### Implementation Code(JS)
 
-``` javascript
-let arr = [4,6,2,5,1,3];
-for(let i = 1; i < arr.length; i++){
+```javascript
+let arr = [4, 6, 2, 5, 1, 3];
+for (let i = 1; i < arr.length; i++) {
   key = arr[i];
-  let j = i-1;
-  while(j >= 0 && arr[j] > key){
-    arr[j+1] = arr[j];
+  let j = i - 1;
+  while (j >= 0 && arr[j] > key) {
+    arr[j + 1] = arr[j];
     j -= 1;
   }
-  arr[j+1] = key;
+  arr[j + 1] = key;
 }
 console.log(arr);
 //[1, 2, 3, 4, 5, 6] 출력
@@ -37,8 +37,10 @@ console.log(arr);
 
 ### 성능 비교(O notation)
 
-- Best case: $O(n)$
-- Worst case: $O(n^2)$
+**Best case**
+$$ O(n) $$
+**Worst case**
+$$ O(n^2) $$
 
 ###### 참고 사이트
 
