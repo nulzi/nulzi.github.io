@@ -21,6 +21,9 @@
                     {% if category[0] == "web" %}
                         <li><a href="/categories/web" class="">WEB ({{category[1].size}})</a></li>
                     {% endif %}
+                    {% if category[0] == "algorithm" %}
+                        <li><a href="/categories/algorithm" class="">Algorithm ({{category[1].size}})</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
       </li>
