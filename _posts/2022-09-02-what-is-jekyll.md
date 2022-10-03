@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "What is Jekyll?"
+categories: dev
 ---
 
 ![image](https://user-images.githubusercontent.com/74344132/188190700-d9a97735-3974-419c-b71b-584644f171e9.png)

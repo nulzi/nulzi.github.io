@@ -1,6 +1,7 @@
 ---
 layout: single
 title: What is AJAX?
+categories: js
 ---
 
 ![ajaxLogo](https://user-images.githubusercontent.com/74344132/189290276-ba0566a2-74ba-4d87-bf9d-6049b6ca2b36.png)

@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Synchronous / Asynchronous Programming
+categories: web
 ---
 
 ## Synchronous(동기)
