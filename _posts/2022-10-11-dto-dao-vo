@@ -1,0 +1,41 @@
+---
+layout: single
+title: Dev. DAO? DTO? VO?
+categories: dev
+---
+
+## DAO
+
+Data Access Object는 데이터베이스의 data에 접근하기 위한 객체입니다. 데이터베이스에 접근하기 위한 로직 & 비지니스 로직을 분리하기 위해서 사용합니다.
+
+## DTO
+
+Data Transfer Object는 계층 간 데이터 교환을 하기 위한 객체입니다. 로직을 가지지 않는 순수한 데이터 객체입니다. getter & setter만 가진 클래스입니다.
+
+계층은 View, Controller, Service, Repository 등이 있습니다.
+
+VO처럼 불변객체로 이용할 수 있다(setter를 사용하지 않고 생성자를 사용하는 경우) 이때 이점은 무엇인가? DTO가 전송하고자 하는 데이터가 전송 과정 중에 변조되지 않음을 보장할 수 있습니다.
+
+## VO
+
+Value Object 값 오브젝트로써 값 자체를 표현하는 객체입니다. read-only 특징을 가집니다. 
+
+서로 다른 이름을 가진 VO 인스턴스가 모든 속성값이 같다면 같은 객체입니다.(equals와 hashcode를 오버라이딩 했다는 전제 조건이 있습니다.)
+ex) color1이 (255,0,0) 속성을 가지고 color2가 (255,0,0) 속서을 가지면 color1과 color2는 같은 객체로 판단합니다.
+객체의 불변성을 보장합니다.
+로직을 포함할 수 있습니다.
+VO 객체는 비교를 위해서 equals와 hashcode를 오버라이드 해줘야 합니다.
+
+### +Entity
+
+실제 DB의 테이블과 매핑되는 클래스입니다.
+id로 구분됩니다.
+로직을 포함할 수 있습니다.
+
+* Entity를 DTO대신 사용할 수 있지 않을까? 가능하지만 문제가 생길 수 있습니다.
+
+###### 참고 사이트
+
+[DAO,DTO,VO란? 간단한 개념 정리](https://melonicedlatte.com/2021/07/24/231500.html)  
+[2020 10분 테코톡 DTO vs VO](https://www.youtube.com/watch?v=J_Dr6R0Ov8E)  
+[2021 10분 테코톡 DTO vs VO](https://www.youtube.com/watch?v=z5fUkck_RZM)  
