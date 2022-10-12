@@ -6,36 +6,142 @@ categories: dev
 
 ## DAO
 
-Data Access Object는 데이터베이스의 data에 접근하기 위한 객체입니다. 데이터베이스에 접근하기 위한 로직 & 비지니스 로직을 분리하기 위해서 사용합니다.
+Data Access Object는 데이터베이스의 **data에 접근**하기 위한 객체입니다. 데이터베이스에 접근하기 위한 로직 & 비지니스 로직을 분리하기 위해서 사용합니다.
 
 ## DTO
 
-Data Transfer Object는 계층 간 데이터 교환을 하기 위한 객체입니다. 로직을 가지지 않는 순수한 데이터 객체입니다. getter & setter만 가진 클래스입니다.
+Data Transfer Object는 계층 간 **데이터 교환**을 하기 위한 객체입니다.  
+로직을 가지지 않고 getter & setter만 가진 순수한 데이터 객체입니다.  
+계층은 View, Controller, Service, Repository 등이 있습니다.  
 
-계층은 View, Controller, Service, Repository 등이 있습니다.
+```java
+public class UserDTO {
+  private String name;
+  private String id;
 
-VO처럼 불변객체로 이용할 수 있다(setter를 사용하지 않고 생성자를 사용하는 경우) 이때 이점은 무엇인가? DTO가 전송하고자 하는 데이터가 전송 과정 중에 변조되지 않음을 보장할 수 있습니다.
+  public String getName() {
+    return name;
+  }
+
+  public String setName(String name) {
+    this.name = name;
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public String setId(String id) {
+    this.id = id;
+  }
+}
+```
+
+setter를 가지고 있기 때문에 가변 객체이지만, VO처럼 불변객체로 이용할 수 있습니다. (setter를 사용하지 않고 생성자를 사용하는 경우)  
+이 경우의 장점은 무엇인가?  
+DTO가 전송하고자 하는 **데이터가 전송 과정 중에 변조되지 않음**을 보장할 수 있습니다.
+
+```java
+public class UserDTO {
+  private String name;
+  private String id;
+
+  public UserDTO(String name, String id) {
+    this.name = name;
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getId() {
+    return id;
+  }
+}
+```
 
 ## VO
 
-Value Object 값 오브젝트로써 값 자체를 표현하는 객체입니다. read-only 특징을 가집니다. 
+Value Object는 **값 자체를 표현**하는 객체입니다.  
+read-only로 객체의 불변성을 보장합니다.  
 
-서로 다른 이름을 가진 VO 인스턴스가 모든 속성값이 같다면 같은 객체입니다.(equals와 hashcode를 오버라이딩 했다는 전제 조건이 있습니다.)
-ex) color1이 (255,0,0) 속성을 가지고 color2가 (255,0,0) 속서을 가지면 color1과 color2는 같은 객체로 판단합니다.
-객체의 불변성을 보장합니다.
+```java
+public class ColorVO {
+  private Int red;
+  private Int green;
+  private Int blue;
+
+  public ColorVO(Int red, Int green, Int blue) {
+    this.red = red;
+    this.green = green;
+    this.blue = blue;
+  }
+}
+```
+
+서로 다른 이름을 가진 VO 인스턴스가 모든 속성값이 같다면 같은 객체입니다.(equals와 hashcode를 오버라이딩 했다는 전제 조건이 있습니다.)  
+ex) color1이 'red' 속성을 가지고 color2가 'red' 속성을 가지면 color1과 color2는 같은 객체로 판단합니다.  
 로직을 포함할 수 있습니다.
-VO 객체는 비교를 위해서 equals와 hashcode를 오버라이드 해줘야 합니다.
+
+```java
+public class ColorVO {
+  private String color
+
+  public ColorVO(String color) {
+    this.color = color;
+  }
+
+//VO 객체는 비교를 위해서 equals와 hashcode를 오버라이드 해줘야 합니다.
+  @Override
+  public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      ColorVO colorVO = (ColorVO) o;
+      return Objects.equals(color, colorVO.color);
+  }
+
+  @Override
+  public int hashCode() {
+      return Objects.hash(color);
+  }
+
+  public void isSameObjects() {
+    String color = "red";
+
+    ColorVO color1 = new ColorVO(color);
+    ColorVO color2 = new ColorVO(color);
+
+    //이때 같은 color로 생성된 color1과 color2는 같은 객체로 취급합니다.
+  }
+}
+```
 
 ### +Entity
 
-실제 DB의 테이블과 매핑되는 클래스입니다.
-id로 구분됩니다.
-로직을 포함할 수 있습니다.
+실제 **DB의 테이블과 매핑되는 클래스**입니다.  
+Entity를 기준으로 테이블이 생성되고 스키마가 변경되기 때문에 요청이나 응답값을 전달하는 클래스로 사용해서는 안 됩니다.  
+id로 구분됩니다.  
+비즈니스 로직을 포함할 수 있습니다.  
+추가적으로 setter를 가지는 경우 가변 객체로 활용할 수 있습니다.
 
-* Entity를 DTO대신 사용할 수 있지 않을까? 가능하지만 문제가 생길 수 있습니다.
+```java
+public class UserEntity {
+  private String name;
+  private String id;
+
+  public UserEntity() {}
+
+  public UserEntity(String name, String id) {
+    this.name = name;
+    this.id = id;
+  }
+}
+```
 
 ###### 참고 사이트
 
 [DAO,DTO,VO란? 간단한 개념 정리](https://melonicedlatte.com/2021/07/24/231500.html)  
 [2020 10분 테코톡 DTO vs VO](https://www.youtube.com/watch?v=J_Dr6R0Ov8E)  
 [2021 10분 테코톡 DTO vs VO](https://www.youtube.com/watch?v=z5fUkck_RZM)  
+[VO란 무엇일까?](https://tecoble.techcourse.co.kr/post/2020-06-11-value-object/)  
