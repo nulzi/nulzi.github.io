@@ -36,35 +36,25 @@ CountingSort(A,B,k)
 
 ```javascript
 const CountingSort = function(A,B,k){
-    let C = [];
-    for(let i=0; i<k;i++){
-        C[i] = 0;
-        console.log('C:',C);
-    }
-    // console.log('end 1');
-    for(let j=0; j<A.length;j++){
-        C[A[j]] += 1;
-        console.log('C:',C);
-    }
-    // console.log('end 2');
-    for(let i=1; i<k; i++){
-        C[i] += C[i-1];
-        console.log('C:',C);
-    }
-    // console.log('end 3');
-    for(let j=A.length-1; j>=0;j--){
-        B[C[A[j]]-1] = A[j];
-        C[A[j]] -= 1;
-        console.log('B:',B);
-        console.log('C:',C);
-    }
-    console.log('sort',A);
-    console.log('sorted',B);
+  let C = [];
+  for(let i=0; i<=k;i++){
+    C[i] = 0;
+  }
+  for(let j=0; j<A.length;j++){
+    C[A[j]] += 1;
+  }
+  for(let i=1; i<=k; i++){
+    C[i] += C[i-1];
+  }
+  for(let j=A.length-1; j>=0;j--){
+    B[C[A[j]]-1] = A[j];
+    C[A[j]] -= 1;
+  }
 }
 
 let A = [3,0,5,1,1];
 let B = [0,0,0,0,0];
-CountingSort(A,B,6);
+CountingSort(A,B,5);
 
 // sort (5) [3, 0, 5, 1, 1]
 // sorted (5) [0, 1, 1, 3, 5]
